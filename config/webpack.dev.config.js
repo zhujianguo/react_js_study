@@ -23,9 +23,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: ["babel-loader?cacheDirectory=true"],
+        test: /\.(ts|tsx|js|jsx)$/,
+        use:'ts-loader',
         include: path.join(__dirname, "../src"),
+        exclude: /node_modules/
       },
     ],
   }
